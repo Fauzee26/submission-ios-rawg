@@ -100,10 +100,6 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
 extension MainVC: GameDelegate {
     func didUpdateGames(_ service: GameService,_ games: [GameModel]) {
         
-        games.forEach { (model) in
-            print(model.name)
-        }
-        
         gamesList = games
         DispatchQueue.main.async {
             self.tableView.reloadData()

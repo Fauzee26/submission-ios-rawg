@@ -41,8 +41,8 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="⭐️4.8/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWf-Ld-V6g">
-                                                                <rect key="frame" x="8" y="5" width="52" height="16"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="⭐️4.8/5 · Sep 17, 2013" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWf-Ld-V6g">
+                                                                <rect key="frame" x="8" y="5" width="382" height="16"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                                 <color key="textColor" name="text"/>
                                                                 <nil key="highlightedColor"/>
@@ -62,6 +62,7 @@
                                                             <constraint firstItem="fAn-P8-Gjy" firstAttribute="top" secondItem="SWf-Ld-V6g" secondAttribute="bottom" id="aiA-PI-aUJ"/>
                                                             <constraint firstItem="fAn-P8-Gjy" firstAttribute="leading" secondItem="eeG-E3-rRE" secondAttribute="leading" constant="8" id="dKB-wu-LUC"/>
                                                             <constraint firstItem="SWf-Ld-V6g" firstAttribute="leading" secondItem="eeG-E3-rRE" secondAttribute="leading" constant="8" id="eDC-nt-DNN"/>
+                                                            <constraint firstAttribute="trailing" secondItem="SWf-Ld-V6g" secondAttribute="trailing" constant="8" id="frZ-5y-v5a"/>
                                                         </constraints>
                                                     </view>
                                                     <color key="backgroundColor" name="grey"/>
@@ -95,17 +96,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="i9Y-uF-upg">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="i9Y-uF-upg">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
                             <constraint firstItem="doy-cd-RYG" firstAttribute="top" secondItem="4Xs-jG-1nn" secondAttribute="top" id="4EN-FZ-WEi"/>
                             <constraint firstItem="doy-cd-RYG" firstAttribute="leading" secondItem="4Xs-jG-1nn" secondAttribute="leading" constant="8" id="6ov-ry-O1D"/>
+                            <constraint firstItem="i9Y-uF-upg" firstAttribute="centerY" secondItem="3UB-YK-aIx" secondAttribute="centerY" id="P2k-Pl-Htv"/>
                             <constraint firstAttribute="bottom" secondItem="doy-cd-RYG" secondAttribute="bottom" constant="8" id="QQE-mJ-PiY"/>
                             <constraint firstItem="4Xs-jG-1nn" firstAttribute="trailing" secondItem="doy-cd-RYG" secondAttribute="trailing" constant="8" id="TJ2-B0-pyE"/>
+                            <constraint firstItem="i9Y-uF-upg" firstAttribute="centerX" secondItem="3UB-YK-aIx" secondAttribute="centerX" id="mnI-7W-cN0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Xs-jG-1nn"/>
                     </view>
@@ -176,13 +178,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Exceptional&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wO-rH-vqx">
-                                <rect key="frame" x="20" y="398" width="199" height="41"/>
+                                <rect key="frame" x="20" y="398" width="374" height="41"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="30"/>
                                 <color key="textColor" name="text"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3833 RATINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6r-HF-ssP">
-                                <rect key="frame" x="20" y="439" width="118.5" height="20.5"/>
+                                <rect key="frame" x="20" y="439" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" name="text"/>
                                 <nil key="highlightedColor"/>
@@ -245,6 +247,7 @@
                         </subviews>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
+                            <constraint firstItem="Vfg-vT-lvn" firstAttribute="trailing" secondItem="0wO-rH-vqx" secondAttribute="trailing" constant="20" id="56C-gN-prb"/>
                             <constraint firstItem="Unk-st-Aa8" firstAttribute="bottom" secondItem="wil-55-5Z7" secondAttribute="bottom" id="7M4-7X-ohD"/>
                             <constraint firstItem="0wO-rH-vqx" firstAttribute="leading" secondItem="Vfg-vT-lvn" secondAttribute="leading" constant="20" id="86q-yV-WYU"/>
                             <constraint firstItem="yMF-dm-9du" firstAttribute="leading" secondItem="Vfg-vT-lvn" secondAttribute="leading" constant="20" id="BM2-Jf-9e7"/>
@@ -252,6 +255,7 @@
                             <constraint firstItem="Vfg-vT-lvn" firstAttribute="trailing" secondItem="Unk-st-Aa8" secondAttribute="trailing" id="Dpo-fb-NrH"/>
                             <constraint firstItem="KiH-JD-bvv" firstAttribute="leading" secondItem="Vfg-vT-lvn" secondAttribute="leading" constant="20" id="E2Y-QV-BRH"/>
                             <constraint firstItem="Vfg-vT-lvn" firstAttribute="trailing" secondItem="wil-55-5Z7" secondAttribute="trailing" id="ImL-BN-lCF"/>
+                            <constraint firstItem="Vfg-vT-lvn" firstAttribute="trailing" secondItem="B6r-HF-ssP" secondAttribute="trailing" constant="20" id="JEK-F9-EqW"/>
                             <constraint firstAttribute="trailing" secondItem="KiH-JD-bvv" secondAttribute="trailing" constant="20" id="LKx-Wb-BVp"/>
                             <constraint firstItem="B6r-HF-ssP" firstAttribute="leading" secondItem="Vfg-vT-lvn" secondAttribute="leading" constant="20" id="NYa-JH-3zB"/>
                             <constraint firstItem="KiH-JD-bvv" firstAttribute="top" secondItem="B6r-HF-ssP" secondAttribute="bottom" constant="30" id="Ozf-u0-AMX"/>
@@ -524,19 +528,19 @@
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="pprofile" width="600" height="600"/>
         <namedColor name="background">
-            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.93300002813339233" green="0.93300002813339233" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="grey">
-            <color red="0.37120670417466378" green="0.43337864298241913" blue="0.49175181984901428" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.37299999594688416" green="0.4309999942779541" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="red">
-            <color red="0.84313725490196079" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.84299999475479126" green="0.13699999451637268" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="text">
-            <color red="0.18823529411764706" green="0.2196078431372549" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18799999356269836" green="0.2199999988079071" blue="0.25499999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
-            <color red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.93300002813339233" green="0.93300002813339233" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

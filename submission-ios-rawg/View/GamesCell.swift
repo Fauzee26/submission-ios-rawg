@@ -16,7 +16,12 @@ class GamesCell: UITableViewCell {
     
     func setupUI(game: GameModel) {
         labelGame.text = game.name
-        labelRating.text = "⭐️\(String(format: "%.1f", game.rating))/\(Int(game.rating_top))"
+        
+        var dateReleased = ""
+        if let gameReleased = game.released {
+            dateReleased = " · \(gameReleased.convertToDate())"
+        }
+        labelRating.text = "⭐️\(String(format: "%.1f", game.rating))/\(Int(game.rating_top))\(dateReleased)"
         
         if let gameBg = game.background_image {
             let url = URL(string: gameBg)
