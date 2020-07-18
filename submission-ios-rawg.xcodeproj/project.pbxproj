@@ -10,6 +10,8 @@
 		5920172424B41454005C1A4C /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5920172324B41454005C1A4C /* RoundedImageView.swift */; };
 		5920172624B414F5005C1A4C /* RoundedVEBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5920172524B414F5005C1A4C /* RoundedVEBottom.swift */; };
 		5920172824B41560005C1A4C /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5920172724B41560005C1A4C /* MainVC.swift */; };
+		5996D81124C2E7F7008A8627 /* GameDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5996D80F24C2E7F7008A8627 /* GameDB.xcdatamodeld */; };
+		5996D81324C30624008A8627 /* UpdateProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996D81224C30624008A8627 /* UpdateProfileVC.swift */; };
 		59AF456C24AC9DFD00281FE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF456B24AC9DFD00281FE0 /* AppDelegate.swift */; };
 		59AF456E24AC9DFD00281FE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF456D24AC9DFD00281FE0 /* SceneDelegate.swift */; };
 		59AF457324AC9DFD00281FE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59AF457124AC9DFD00281FE0 /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		5920172324B41454005C1A4C /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		5920172524B414F5005C1A4C /* RoundedVEBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedVEBottom.swift; sourceTree = "<group>"; };
 		5920172724B41560005C1A4C /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		5996D81024C2E7F7008A8627 /* GameDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameDB.xcdatamodel; sourceTree = "<group>"; };
+		5996D81224C30624008A8627 /* UpdateProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileVC.swift; sourceTree = "<group>"; };
 		59AF456824AC9DFD00281FE0 /* Rawg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rawg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59AF456B24AC9DFD00281FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59AF456D24AC9DFD00281FE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 				59B3FE9724BAF51B003153D7 /* AboutVC.swift */,
 				59B3FE9E24BB16CF003153D7 /* DetailVC.swift */,
 				59B3FEA024BB66D2003153D7 /* SortVC.swift */,
+				5996D81224C30624008A8627 /* UpdateProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 		59AF455F24AC9DFD00281FE0 = {
 			isa = PBXGroup;
 			children = (
+				5996D80F24C2E7F7008A8627 /* GameDB.xcdatamodeld */,
 				59AF456A24AC9DFD00281FE0 /* submission-ios-rawg */,
 				59AF456924AC9DFD00281FE0 /* Products */,
 			);
@@ -220,9 +226,11 @@
 				5920172624B414F5005C1A4C /* RoundedVEBottom.swift in Sources */,
 				59B3FE9224BABEA5003153D7 /* GameModel.swift in Sources */,
 				59B3FE9824BAF51B003153D7 /* AboutVC.swift in Sources */,
+				5996D81124C2E7F7008A8627 /* GameDB.xcdatamodeld in Sources */,
 				59AF456E24AC9DFD00281FE0 /* SceneDelegate.swift in Sources */,
 				59B3FE9624BACB43003153D7 /* GamesCell.swift in Sources */,
 				59B3FE9424BAC012003153D7 /* GameService.swift in Sources */,
+				5996D81324C30624008A8627 /* UpdateProfileVC.swift in Sources */,
 				59B3FEA524BB6BFF003153D7 /* UserDefaultService.swift in Sources */,
 				59B3FE9D24BAFC9E003153D7 /* Ext.swift in Sources */,
 			);
@@ -422,6 +430,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5996D80F24C2E7F7008A8627 /* GameDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5996D81024C2E7F7008A8627 /* GameDB.xcdatamodel */,
+			);
+			currentVersion = 5996D81024C2E7F7008A8627 /* GameDB.xcdatamodel */;
+			path = GameDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 59AF456024AC9DFD00281FE0 /* Project object */;
 }

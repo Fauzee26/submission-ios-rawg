@@ -24,6 +24,7 @@ class MainVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        setProfile()
         gameService.delegate = self
         if defService.orderPosition > orderingList.count {
             gameService.getAllGames()
@@ -62,6 +63,16 @@ class MainVC: UIViewController {
     @IBAction func btnSortPressed(_ sender: Any) {
         performSegue(withIdentifier: "toSortVC", sender: self)
     }
+    
+    func setProfile() {
+        if defService.hasLaunched == false {
+            defService.profileName = "Hilmy Fauzi"
+            defService.profileEmail = "hilmy2602@gmail.com"
+            defService.profilePhoneNumber = "+6285263635591"
+            defService.profileImage = nil
+            defService.hasLaunched = true
+        }
+    }
 }
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
@@ -73,7 +84,14 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "gamesCell") as? GamesCell else {return UITableViewCell()}
         
         let model = gamesList![indexPath.row]
-        cell.setupUI(game: model)
+        
+        var data: Data?
+        if let gameBg = model.background_image {
+            let url = URL(string: gameBg)
+            data = try? Data(contentsOf: url!)
+        }
+        
+        cell.setupUI(game: model, imageData: data)
         
         return cell
     }
@@ -103,7 +121,7 @@ extension MainVC: GameDelegate {
         gamesList = games
         DispatchQueue.main.async {
             self.tableView.reloadData()
-
+            
             self.activityIndicator.stopAnimating()
             self.activityIndicator.isHidden = true
             self.tableView.isHidden = false

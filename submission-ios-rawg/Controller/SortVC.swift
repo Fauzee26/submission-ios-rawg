@@ -54,6 +54,10 @@ class SortVC: UIViewController {
         NotificationCenter.default.post(name: NOTIF_RESET_SORT_SELECTED, object: nil)
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func btnCancelPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension SortVC: UITableViewDelegate, UITableViewDataSource {
@@ -66,12 +70,7 @@ extension SortVC: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = orderingList[indexPath.row].capitalizingFirstLetter()
         
         cell.accessoryType = indexPath.row == defService.orderPosition ? .checkmark : .none
-//        if indexPath.row == defService.orderPosition {
-//            cell.accessoryType = .checkmark
-//        } else {
-//            cell.accessoryType = .none
-//        }
-        
+
         return cell
     }
     
