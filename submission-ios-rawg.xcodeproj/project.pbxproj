@@ -12,6 +12,9 @@
 		5920172824B41560005C1A4C /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5920172724B41560005C1A4C /* MainVC.swift */; };
 		5996D81124C2E7F7008A8627 /* GameDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5996D80F24C2E7F7008A8627 /* GameDB.xcdatamodeld */; };
 		5996D81324C30624008A8627 /* UpdateProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996D81224C30624008A8627 /* UpdateProfileVC.swift */; };
+		5996D81524C34D39008A8627 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996D81424C34D39008A8627 /* CoreDataService.swift */; };
+		5996D81724C3EA4F008A8627 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996D81624C3EA4F008A8627 /* Constans.swift */; };
+		5996D81924C40395008A8627 /* FavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5996D81824C40395008A8627 /* FavoritesVC.swift */; };
 		59AF456C24AC9DFD00281FE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF456B24AC9DFD00281FE0 /* AppDelegate.swift */; };
 		59AF456E24AC9DFD00281FE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AF456D24AC9DFD00281FE0 /* SceneDelegate.swift */; };
 		59AF457324AC9DFD00281FE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59AF457124AC9DFD00281FE0 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 		5920172724B41560005C1A4C /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		5996D81024C2E7F7008A8627 /* GameDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameDB.xcdatamodel; sourceTree = "<group>"; };
 		5996D81224C30624008A8627 /* UpdateProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileVC.swift; sourceTree = "<group>"; };
+		5996D81424C34D39008A8627 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		5996D81624C3EA4F008A8627 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		5996D81824C40395008A8627 /* FavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVC.swift; sourceTree = "<group>"; };
 		59AF456824AC9DFD00281FE0 /* Rawg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rawg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59AF456B24AC9DFD00281FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59AF456D24AC9DFD00281FE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +77,7 @@
 				59B3FE9E24BB16CF003153D7 /* DetailVC.swift */,
 				59B3FEA024BB66D2003153D7 /* SortVC.swift */,
 				5996D81224C30624008A8627 /* UpdateProfileVC.swift */,
+				5996D81824C40395008A8627 /* FavoritesVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -97,7 +104,6 @@
 		59AF455F24AC9DFD00281FE0 = {
 			isa = PBXGroup;
 			children = (
-				5996D80F24C2E7F7008A8627 /* GameDB.xcdatamodeld */,
 				59AF456A24AC9DFD00281FE0 /* submission-ios-rawg */,
 				59AF456924AC9DFD00281FE0 /* Products */,
 			);
@@ -120,6 +126,7 @@
 				5975F64524B1E7B10015684D /* View */,
 				5975F64424B1E7A60015684D /* Controller */,
 				59AF457124AC9DFD00281FE0 /* Main.storyboard */,
+				5996D80F24C2E7F7008A8627 /* GameDB.xcdatamodeld */,
 				59AF456B24AC9DFD00281FE0 /* AppDelegate.swift */,
 				59AF456D24AC9DFD00281FE0 /* SceneDelegate.swift */,
 				59AF457424AC9DFF00281FE0 /* Assets.xcassets */,
@@ -134,6 +141,7 @@
 			children = (
 				59B3FE9324BAC012003153D7 /* GameService.swift */,
 				59B3FEA424BB6BFF003153D7 /* UserDefaultService.swift */,
+				5996D81424C34D39008A8627 /* CoreDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -142,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				59B3FE9C24BAFC9E003153D7 /* Ext.swift */,
+				5996D81624C3EA4F008A8627 /* Constans.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -217,7 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5996D81924C40395008A8627 /* FavoritesVC.swift in Sources */,
+				5996D81524C34D39008A8627 /* CoreDataService.swift in Sources */,
 				5920172424B41454005C1A4C /* RoundedImageView.swift in Sources */,
+				5996D81724C3EA4F008A8627 /* Constans.swift in Sources */,
 				5920172824B41560005C1A4C /* MainVC.swift in Sources */,
 				59B3FE9F24BB16CF003153D7 /* DetailVC.swift in Sources */,
 				59B3FEA324BB69B8003153D7 /* OrderingModel.swift in Sources */,
@@ -308,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -362,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

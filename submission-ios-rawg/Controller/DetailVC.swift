@@ -21,19 +21,28 @@ class DetailVC: UIViewController {
     @IBOutlet weak var labelPlatforms: UILabel!
     @IBOutlet weak var labelGenre: UILabel!
     @IBOutlet weak var labelMetacritics: UILabel!
+    @IBOutlet weak var btnFavorite: UIBarButtonItem!
     
+    var service = CoreDataService.self
     override func viewDidLoad() {
         super.viewDidLoad()
         title = game?.name
+        
+        if service.isFavorite(game!) == true {
+            btnFavorite.image = UIImage(systemName: "star.fill")
+        } else {
+            btnFavorite.image = UIImage(systemName: "star")
+        }
         
         viewBg.setGradientBackground(colorTop: .clear, colorBottom: UIColor(named: "grey")!)
         labelReleasedDate.text = game?.released?.convertToDate() ?? ""
         labelPlaytime.text = " · AVERAGE PLAYTIME: \(game!.playtime) HOURS"
         labelRatingCount.text = "\(String(describing: game!.reviews_count)) RATINGS"
         
+        print("rating: ", game!.ratings[0])
         let rating = (game?.ratings.count)! > 0 ? "\"\(game!.ratings[0].title.capitalizingFirstLetter())\"" : ""
         labelRatingTop.text = rating
-
+        
         var platformsName = [String]()
         game?.platforms.forEach({ (platformArray) in
             platformsName.append(platformArray.platform.name)
@@ -71,6 +80,16 @@ class DetailVC: UIViewController {
                 let image = UIImage(data: imageData)
                 self.imgGame.image = image
             }
+        }
+    }
+    
+    @IBAction func btnFavoritePressed(_ sender: Any) {
+        if service.isFavorite(game!) == true {
+            service.deleteFromFavorite(game!)
+            btnFavorite.image = UIImage(systemName: "star")
+        } else {
+            service.saveToFavorite(game!)
+            btnFavorite.image = UIImage(systemName: "star.fill")
         }
     }
 }
