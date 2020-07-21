@@ -39,7 +39,6 @@ class DetailVC: UIViewController {
         labelPlaytime.text = " · AVERAGE PLAYTIME: \(game!.playtime) HOURS"
         labelRatingCount.text = "\(String(describing: game!.reviews_count)) RATINGS"
         
-        print("rating: ", game!.ratings[0])
         let rating = (game?.ratings.count)! > 0 ? "\"\(game!.ratings[0].title.capitalizingFirstLetter())\"" : ""
         labelRatingTop.text = rating
         

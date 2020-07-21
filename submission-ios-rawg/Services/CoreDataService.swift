@@ -33,10 +33,6 @@ class CoreDataService {
                         ratings.append(rating)
                     }
                     
-                    let ratingModel = Rating(
-                        title: gameModel.value(forKey: K.Core.rating_title) as! String
-                    )
-                    
                     let platformsData = gameModel.value(forKey: K.Core.platforms_name) as! String
                     let platformsArray = platformsData.components(separatedBy: ", ")
                     var platforms = [Platforms]()
@@ -56,9 +52,9 @@ class CoreDataService {
                         
                     gameModels.append(
                         GameModel(id: gameModel.value(forKey: K.Core.id) as! Int,
-                                  name: gameModel.value(forKey: K.Core.name) as! String,
-                                  released: gameModel.value(forKey: K.Core.released) as! String,
-                                  background_image: gameModel.value(forKey: K.Core.background_image) as! String,
+                                  name: gameModel.value(forKey: K.Core.name) as? String,
+                                  released: gameModel.value(forKey: K.Core.released) as? String,
+                                  background_image: gameModel.value(forKey: K.Core.background_image) as? String,
                                   rating: gameModel.value(forKey: K.Core.rating) as! Double,
                                   rating_top: gameModel.value(forKey: K.Core.rating_top) as! Double,
                                   ratings_count: gameModel.value(forKey: K.Core.ratings_count) as! Int,
@@ -67,7 +63,7 @@ class CoreDataService {
                                   ratings: ratings,
                                   platforms: platforms,
                                   genres: genreArray,
-                                  metacritic: gameModel.value(forKey: K.Core.metacritic) as! Int)
+                                  metacritic: gameModel.value(forKey: K.Core.metacritic) as? Int)
                     )
                 }
             } catch let err {
@@ -137,8 +133,6 @@ class CoreDataService {
             fetchRequest.predicate = NSPredicate(format: "\(K.Core.id) = %ld", model.id)
             do {
                 let fetch = try managedContext.fetch(fetchRequest)
-                print("req: ", fetch
-                )
 
                 if !fetch.isEmpty {
                     isFavorite = true
