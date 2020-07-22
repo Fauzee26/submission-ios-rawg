@@ -11,21 +11,44 @@ import UIKit
 class AboutVC: UIViewController {
 
     @IBOutlet weak var imgProfile: UIImageView!
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var labelPhone: UILabel!
+    @IBOutlet weak var labelEmail: UILabel!
+    
+    var def = UserDefaultServices.instance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         imgProfile.layer.cornerRadius = imgProfile.bounds.height/2
+        imgProfile.contentMode = .scaleToFill
+
+        NotificationCenter.default.addObserver(self, selector: #selector(profileUpdated(_:)), name: NOTIF_PROFILE_UPDATED, object: nil)
+
+        setupUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupUI() {
+        labelName.text = def.profileName
+        labelPhone.text = def.profilePhoneNumber
+        labelEmail.text = def.profileEmail
+        
+        if let profileImage = def.profileImage {
+            imgProfile.image = UIImage(data: profileImage)
+        }
     }
-    */
-
+    
+    @objc func profileUpdated(_ notif: Notification) {
+        setupUI()
+    }
+    
+    @IBAction func btnUpdateProfile(_ sender: Any) {
+        performSegue(withIdentifier: "toUpdateProfile", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toUpdateProfile" {
+            segue.destination.isModalInPresentation = true
+        }
+    }
 }

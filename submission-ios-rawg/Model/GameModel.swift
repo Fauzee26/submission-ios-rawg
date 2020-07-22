@@ -13,7 +13,7 @@ struct GameModels: Codable {
 }
 
 struct GameModel: Codable {
-//    let id: Int
+    let id: Int
     let name: String?
     let released: String?
     let background_image: String?
@@ -26,7 +26,6 @@ struct GameModel: Codable {
     let platforms: [Platforms]
     let genres: [Genre]
     let metacritic: Int?
-    
 }
 
 struct Rating: Codable {

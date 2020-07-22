@@ -43,3 +43,4 @@ extension String {
 // Notifications Constans
 let NOTIF_RESET_SORT_SELECTED = Notification.Name("resetSortSelected")
 let NOTIF_CONFIRM_SORT_PRESSED = Notification.Name("confirmSortPressed")
+let NOTIF_PROFILE_UPDATED = Notification.Name("profileUpdated")
